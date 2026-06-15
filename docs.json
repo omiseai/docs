@@ -31,11 +31,9 @@
       },
       {
         "tab": "Docs",
-        "groups": [
-          {
-            "group": "Internal",
-            "pages": ["docs/infra", "docs/shanai-tool"]
-          }
+        "pages": [
+          "docs/infra",
+          "docs/shanai-tool"
         ]
       }
     ]
