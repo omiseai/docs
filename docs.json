@@ -54,10 +54,7 @@
           },
           {
             "group": "Benefits & time off",
-            "pages": [
-              "hr-people/benefits",
-              "hr-people/time-off"
-            ]
+            "pages": ["hr-people/benefits", "hr-people/time-off"]
           },
           {
             "group": "Growth & pay",
@@ -120,6 +117,24 @@
         ]
       },
       {
+        "tab": "Team",
+        "groups": [
+          {
+            "group": "Members",
+            "pages": ["team/matt"]
+          }
+        ]
+      },
+      {
+        "tab": "Docs",
+        "groups": [
+          {
+            "group": "Internal",
+            "pages": ["docs/infra", "docs/shanai-tool"]
+          }
+        ]
+      },
+      {
         "tab": "Engineering",
         "groups": [
           {
@@ -128,10 +143,7 @@
           },
           {
             "group": "Setup & deployment",
-            "pages": [
-              "engineering/dev-setup",
-              "engineering/deployment"
-            ]
+            "pages": ["engineering/dev-setup", "engineering/deployment"]
           },
           {
             "group": "Incident response",
