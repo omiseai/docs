@@ -8,5 +8,3 @@ title: "Infra"
 - Cloudflare
 - Resend
 - Stripe
-
-TEST
