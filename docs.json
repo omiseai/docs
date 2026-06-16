@@ -35,6 +35,12 @@
           "docs/infra",
           "docs/tools"
         ]
+      },
+      {
+        "tab": "Projects",
+        "pages": [
+          "prototype-output"
+        ]
       }
     ]
   },
