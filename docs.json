@@ -33,8 +33,7 @@
         "tab": "Docs",
         "pages": [
           "docs/infra",
-          "docs/tools",
-          "docs/test"
+          "docs/tools"
         ]
       }
     ]
