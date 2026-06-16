@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "product_master entry",
+  "type": "object",
+  "required": ["id", "name_ja", "name_en", "category", "verified_against"],
+  "properties": {
+    "id": {"type": "string"},
+    "name_ja": {"type": "string"},
+    "name_en": {"type": "string"},
+    "maker_ja": {"type": "string"},
+    "maker_en": {"type": "string"},
+    "category": {"type": "string", "examples": ["sake", "shochu", "wine", "beer"]},
+    "subcategory": {"type": "string"},
+    "region": {"type": "string"},
+    "abv": {"type": "number"},
+    "allergens": {"type": "array", "items": {"type": "string"}},
+    "restrictions": {"type": "array", "items": {"type": "string"}},
+    "verified_against": {"type": "string", "description": "the authoritative source, e.g. 'brewery official spec'"},
+    "verification_rank": {"type": "string", "enum": ["S", "A", "B", "C"]}
+  }
+}

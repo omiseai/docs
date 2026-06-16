@@ -1,0 +1,52 @@
+{
+  "expectations": [
+    {
+      "text": "Separates observed facts from inferences using explicit provenance tags",
+      "passed": true,
+      "evidence": "tags present: ['[MENU]', '[OPERATOR]', '[CANONICAL]', '[INFERRED]', '[UNKNOWN]']"
+    },
+    {
+      "text": "Produces a gap register / operator questions ranked safety-first",
+      "passed": true,
+      "evidence": "…hop  Questions for the operator, ranked safety-first. Status: OPEN / ANSWERED. **Operator is…"
+    },
+    {
+      "text": "Routes uncertain allergen status to gaps rather than asserting it as fact",
+      "passed": true,
+      "evidence": "… drives buckwheat     + wheat allergen; → gap   - dipping sauce / つゆ (composite → das…"
+    },
+    {
+      "text": "Assigns a per-record verification grade (S/A/B/C or confidence)",
+      "passed": true,
+      "evidence": "…ing, regenerate Stage 06 and recompute `verification_rank` per dish.  # 06 · NFG output — Soba sh…"
+    },
+    {
+      "text": "Expands composite ingredients (dashi, roux, batter, mayo) so hidden allergens surface",
+      "passed": true,
+      "evidence": "… dish: components → ingredients (expand composites), cooking methods, every field provena…"
+    },
+    {
+      "text": "Produces a Stage 07 operator sign-off sheet that foregrounds inferred items for confirmation",
+      "passed": false,
+      "evidence": "no operator sign-off sheet found"
+    },
+    {
+      "text": "Identifies the soba buckwheat/wheat ratio as a top safety gap",
+      "passed": true,
+      "evidence": "…ur ratio.** Japanese \"soba\" ranges from 十割 (100% buckwheat,   wheat-free) to ニ八 (8…"
+    },
+    {
+      "text": "Flags curry-udon roux as a hidden-allergen composite (wheat/dairy)",
+      "passed": true,
+      "evidence": "…ments, no portion/photo data. - Item 3 (カレーうどん) is an udon (wheat) dish on an otherwise soba menu — captu…"
+    }
+  ],
+  "passed": 7,
+  "total": 8,
+  "summary": {
+    "pass_rate": 0.875,
+    "passed": 7,
+    "failed": 1,
+    "total": 8
+  }
+}

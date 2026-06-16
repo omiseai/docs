@@ -1,0 +1,5 @@
+{
+  "eval_id": 0,
+  "eval_name": "izakaya-full-ingest",
+  "prompt": "Onboard a new live restaurant (Torihei izakaya, Osaka) by ingesting the owner's pasted menu into NFG data so the concierge can answer diner questions, including allergy questions."
+}

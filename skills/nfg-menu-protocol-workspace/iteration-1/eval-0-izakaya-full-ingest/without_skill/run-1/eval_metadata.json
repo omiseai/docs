@@ -1,0 +1,14 @@
+{
+  "eval_id": 0,
+  "eval_name": "izakaya-full-ingest",
+  "prompt": "Onboard a new live restaurant (Torihei izakaya, Osaka) by ingesting the owner's pasted menu into NFG data so the concierge can answer diner questions, including allergy questions.",
+  "assertions": [
+    "Separates observed facts from inferences using explicit provenance tags",
+    "Produces a gap register / operator questions ranked safety-first",
+    "Routes uncertain allergen status to gaps rather than asserting it as fact",
+    "Assigns a per-record verification grade (S/A/B/C or confidence)",
+    "Expands composite ingredients (dashi, roux, batter, mayo) so hidden allergens surface",
+    "Handles the sake (黒龍) via canonical matching and avoids the 龍-substring brand error",
+    "Flags the daily-rotating sashimi (本日の) as not having a fixed allergen profile"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "expectations": [
+    {
+      "text": "Separates observed facts from inferences using explicit provenance tags",
+      "passed": false,
+      "evidence": "no provenance tags found"
+    },
+    {
+      "text": "Produces a gap register / operator questions ranked safety-first",
+      "passed": true,
+      "evidence": "…nzuru mono*). Mandatory items carry the highest risk and are called out explicitly.  - Manda…"
+    },
+    {
+      "text": "Routes uncertain allergen status to gaps rather than asserting it as fact",
+      "passed": true,
+      "evidence": "uncertainty-routing language present"
+    },
+    {
+      "text": "Assigns a per-record verification grade (S/A/B/C or confidence)",
+      "passed": false,
+      "evidence": "no verification grade found"
+    },
+    {
+      "text": "Expands composite ingredients (dashi, roux, batter, mayo) so hidden allergens surface",
+      "passed": false,
+      "evidence": "… Milk (乳) | **POSSIBLE** | Some panko / batters contain milk; tonkatsu sauce usually d…"
+    },
+    {
+      "text": "Produces a Stage 07 operator sign-off sheet that foregrounds inferred items for confirmation",
+      "passed": false,
+      "evidence": "no operator sign-off sheet found"
+    },
+    {
+      "text": "Keeps gelatin as its own token, not a meat allergen (dessert mis-tag pitfall)",
+      "passed": false,
+      "evidence": "gelatin/meat distinction not made explicit"
+    },
+    {
+      "text": "Does not auto-derive soy from 豆腐 in 杏仁豆腐 (naming trap)",
+      "passed": true,
+      "evidence": "…AMING TRAP — read carefully.** Despite \"豆腐 (tofu)\" in the name, this dessert is **not soybean tofu**. It is a chilled, milk-based…"
+    }
+  ],
+  "passed": 3,
+  "total": 8,
+  "summary": {
+    "pass_rate": 0.375,
+    "passed": 3,
+    "failed": 5,
+    "total": 8
+  }
+}

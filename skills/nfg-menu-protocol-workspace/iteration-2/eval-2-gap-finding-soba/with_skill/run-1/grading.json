@@ -1,0 +1,52 @@
+{
+  "expectations": [
+    {
+      "text": "Separates observed facts from inferences using explicit provenance tags",
+      "passed": true,
+      "evidence": "tags present: ['[OPERATOR]', '[CANONICAL]', '[INFERRED]', '[UNKNOWN]']"
+    },
+    {
+      "text": "Produces a gap register / operator questions ranked safety-first",
+      "passed": true,
+      "evidence": "…g`)  Questions for the operator, ranked safety-first. Status: OPEN / ANSWERED. **All items b…"
+    },
+    {
+      "text": "Routes uncertain allergen status to gaps rather than asserting it as fact",
+      "passed": true,
+      "evidence": "…wheat). **Ratio UNKNOWN per this shop** → GAP (wheat allergen)   - **つゆ / そばつゆ (dippi…"
+    },
+    {
+      "text": "Assigns a per-record verification grade (S/A/B/C or confidence)",
+      "passed": true,
+      "evidence": "…: Machine Semantics + Human Narrative + verification_rank. No operator answers exist yet, so ever…"
+    },
+    {
+      "text": "Expands composite ingredients (dashi, roux, batter, mayo) so hidden allergens surface",
+      "passed": true,
+      "evidence": "…later stages) - No ingredient lists, no batter/oil disclosures, no buckwheat-vs-wheat …"
+    },
+    {
+      "text": "Produces a Stage 07 operator sign-off sheet that foregrounds inferred items for confirmation",
+      "passed": true,
+      "evidence": "… questions. - **Live:** at the Stage 07 sign-off meeting, walk the owner through   `07_o…"
+    },
+    {
+      "text": "Identifies the soba buckwheat/wheat ratio as a top safety gap",
+      "passed": true,
+      "evidence": "…nt lists, no batter/oil disclosures, no buckwheat-vs-wheat ratio,   no broth/tsuyu composition, no curry…"
+    },
+    {
+      "text": "Flags curry-udon roux as a hidden-allergen composite (wheat/dairy)",
+      "passed": true,
+      "evidence": "…nd   all unconfirmed.  ---  ## Dish 3 — カレーうどん  (Curry udon — wheat udon in curry broth [INFERRED·high]) - …"
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "summary": {
+    "pass_rate": 1.0,
+    "passed": 8,
+    "failed": 0,
+    "total": 8
+  }
+}

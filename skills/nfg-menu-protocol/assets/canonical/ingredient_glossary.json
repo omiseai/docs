@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "asset": "ingredient_glossary",
+    "status": "seed",
+    "note": "Small real-shaped starter set. Full production set is 481 verified EN ingredient names. Policy B: use a plain English name if one exists; Romaji + gloss only for Japan-unique items. Respect regional labels.",
+    "full_size": 481
+  },
+  "entries": [
+    { "term_ja": "タイ", "term_en": "Sea bream", "japan_unique": false, "allergen_flag": ["fish"], "note": "plain English name exists — do NOT romanize" },
+    { "term_ja": "カニ面", "term_en": "Crab-shell stuffed with crab meat and roe", "japan_unique": true, "allergen_flag": ["crab"], "note": "real past failure: mis-translated as 'Crab face'" },
+    { "term_ja": "バイ貝", "term_en": "Whelk (sea snail)", "japan_unique": false, "allergen_flag": ["abalone"], "note": "real past failure: mis-translated as 'buy shell'" },
+    { "term_ja": "へしこ", "term_en": "Heshiko (fermented mackerel)", "japan_unique": true, "allergen_flag": ["fish"], "note": "Japan-unique — Romaji + gloss is correct" },
+    { "term_ja": "片栗粉", "term_en": "Potato starch", "japan_unique": false, "allergen_flag": [], "note": "real past failure: mis-translated as 'Cornstarch' (different ingredient)" },
+    { "term_ja": "能登牛", "term_en": "Noto Beef", "japan_unique": true, "allergen_flag": ["beef"], "region": "Ishikawa", "note": "regional label — never apply Fukui's 若狭牛 to an Ishikawa store" },
+    { "term_ja": "若狭牛", "term_en": "Wakasa Beef (Fukui Wagyu)", "japan_unique": true, "allergen_flag": ["beef"], "region": "Fukui" }
+  ]
+}

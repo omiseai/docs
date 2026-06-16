@@ -1,0 +1,14 @@
+{
+  "eval_id": 2,
+  "eval_name": "gap-finding-soba",
+  "prompt": "For a soba shop's menu (zaru soba, tempura soba, curry udon, sobagaki), determine what to ask the owner before the concierge can safely answer diner questions.",
+  "assertions": [
+    "Separates observed facts from inferences using explicit provenance tags",
+    "Produces a gap register / operator questions ranked safety-first",
+    "Routes uncertain allergen status to gaps rather than asserting it as fact",
+    "Assigns a per-record verification grade (S/A/B/C or confidence)",
+    "Expands composite ingredients (dashi, roux, batter, mayo) so hidden allergens surface",
+    "Identifies the soba buckwheat/wheat ratio as a top safety gap",
+    "Flags curry-udon roux as a hidden-allergen composite (wheat/dairy)"
+  ]
+}

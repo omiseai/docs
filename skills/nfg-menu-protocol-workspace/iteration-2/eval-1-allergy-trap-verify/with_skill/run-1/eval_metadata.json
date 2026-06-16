@@ -1,0 +1,5 @@
+{
+  "eval_id": 1,
+  "eval_name": "allergy-trap-verify",
+  "prompt": "Verify the allergens for a lunch menu (tonkatsu set, ebi fry, annin tofu, coffee jelly) before turning on the concierge — a diner with allergies will rely on the answers."
+}
