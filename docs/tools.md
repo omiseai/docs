@@ -3,6 +3,6 @@ title: "Tools"
 ---
 
 - ​Linear​
-- Line
+- Slack
 - Bitwarden
 - Mintify
