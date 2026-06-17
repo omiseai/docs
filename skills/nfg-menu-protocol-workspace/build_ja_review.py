@@ -70,10 +70,13 @@ STAGE_LABEL = {
 
 def read_outputs(key):
     base = os.path.join(ITER, key, "with_skill", "run-1", "outputs")
+    ja = os.path.join(ITER, key, "with_skill", "run-1", "outputs_ja")
     files = []
     for p in sorted(glob.glob(os.path.join(base, "*.md"))):
         name = os.path.basename(p)
-        files.append((name, open(p, encoding="utf-8").read()))
+        ja_path = os.path.join(ja, name)  # prefer a Japanese-translated copy if present
+        use = ja_path if os.path.exists(ja_path) else p
+        files.append((name, open(use, encoding="utf-8").read()))
     return files
 
 def read_grading(key):
