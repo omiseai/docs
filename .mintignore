@@ -5,7 +5,3 @@
 # Draft content
 drafts/
 *.draft.mdx
-
-# NFG menu-protocol skill + run artifacts (not docs site content)
-skills/
-nfg-runs/

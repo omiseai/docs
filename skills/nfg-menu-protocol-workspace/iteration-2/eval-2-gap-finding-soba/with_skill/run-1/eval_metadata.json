@@ -1,5 +1,0 @@
-{
-  "eval_id": 2,
-  "eval_name": "gap-finding-soba",
-  "prompt": "For a soba shop's menu (zaru soba, tempura soba, curry udon, sobagaki), determine what to ask the owner before the concierge can safely answer diner questions."
-}
