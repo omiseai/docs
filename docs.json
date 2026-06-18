@@ -34,7 +34,8 @@
         "pages": [
           "docs/infra",
           "docs/tools",
-          "docs/dev"
+          "docs/dev",
+          "docs/matt-notepad"
         ]
       }
     ]
