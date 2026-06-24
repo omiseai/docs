@@ -29,6 +29,11 @@ title: "Matt-notepad"
         - new python script w/ `claude -p` -- converts ingredient final/complete decomposition data into a presentable final HTML encapsulated app for restaurant operator to fill out and sign off on
             - sign off on this via button outputs a record
     - Claude analog
+        - look at menu data, look at my prompt sent to Claude from a prev session and the DESIGN.md doc Claude made based on that. Need to build the pre-interview and ingredient cluster questions
+        - simulate answers to the questions
+        - look at menu data, question answers from prev step, `japan_allergens.json`, and make questions for any dish that is unclear that it has allergens
+        - look at results, make more questions if needed and repeat
+        - make a final ingredient output with allergen tags for operator checking
         
 
 - later dig around in prev attempts with Claude to find certain conventions that may be useful, like "[INFERRED]" and so on
