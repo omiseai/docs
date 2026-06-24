@@ -17,6 +17,7 @@ title: "Matt-notepad"
         - know that I already have the fixture menu to use
         - make two new schema -- one for pre-interviews and one for ingredient cluster interviews
         - new python script w/ `claude -p` takes conforming menu output as context and special prompt, outputs the JSON representing both the pre-interviews and ingredient cluster interviews appropriate for that particular menu
+        - make an orchestrator python script that calls the first script
         - new python script w/ `claude -p` converts the JSON from prev step into two encapulated HTML apps that both save JSON locally
         - new python script w/ `claude -p` optionally directly makes sample JSON results data for testing
         - new schema for menu items ingredient decomposition
