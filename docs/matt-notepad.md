@@ -26,6 +26,7 @@ MATT TODOS:
 
 
 
+
 make all this into slides, show Shingo:
 Get ready for Bonta education session:
 
@@ -43,9 +44,22 @@ Get ready for Bonta education session:
             - build and monitor guardrails
             - update agents and tools as newer technology is released and we can improve Bonta's use of it
 
+- ChatGPT, Claude, etc. are all agents
+- An agent is an AI with tools
+- Tools for AI agents are things like accessing and reading documents, connecting to external services to get data and interact with it, and memory so an agent can remember certain important things you told it.
+- Agents can also take on a persona, like becoming an expert in responding to customer reviews about your restaurant
+- They can also learn/re-learn skills that you teach them, for example how to do your expenses.
+- ChatGPT and Claude are personal agents. The tools, persona, and skills are very specific to you. 
+- Agents can also be team agents, so they are accessible by everyone in the company, for example via Line or Slack.
+- Team agents also use tools, have a persona and can learn/re-learn skills, but they 
 
+
+
+
+
+- just using basic features is fine, 
 - About Agent エイジェントとは？
-
+    - 
 
 
 - personal AI
