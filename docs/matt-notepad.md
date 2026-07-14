@@ -44,6 +44,10 @@ Get ready for Bonta education session:
             - update agents and tools as newer technology is released and we can improve Bonta's use of it
 
 
+- About Agent エイジェントとは？
+
+
+
 - personal AI
     - AI is an assistant for one person, has memory for just one human-agent interaction
 - a company agent
