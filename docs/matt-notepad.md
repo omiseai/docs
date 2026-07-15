@@ -27,31 +27,29 @@ MATT TODOS:
 
 
 
-make all this into slides, show Shingo:
-Get ready for Bonta education session:
 
-- maybe compare a few years ago if Shingo and I were to come in and help them
+- What is an AI Agent?
+    - An agent is simply AI you can chat with that with tools
+    - Tools for AI agents are things like accessing and reading documents, connecting to external services to get data and interact with it, and memory so an agent can remember certain important things you told it.
+    - Agents can also take on a persona, like becoming an expert in responding to customer reviews about your restaurant
+    - They can also learn/re-learn skills that you teach them, for example how to do your expenses.
+    - Agents can do scheduled tasks, for example generating a report for you every day before you start your work day.
+    - Agents can also be team agents, so they are accessible by everyone in the company, for example via Line or Slack.
+    - The tools, persona, skills and scheduled tasks that are specific to your company become your intellectual property.
+    - Companies that use AI agents can relieve themselves of repetative and mundane work so everyone can operate more efficiently.
+- Today vs. a few years ago
     - few years ago
-        - we'd build an app
+        - we'd build Bonta an app
         - the app would only do what Shingo and I built, based on Bonta's needs
-        - Bonta could only ever ask us to make features and would have to wait until we do
+        - Bonta could only ever ask us to make features and would have to wait until we build them
     - now
         - we build agents
         - at first, the agents do mostly do what we set them up to do, based on Bonta's needs
         - Bonta can build new capabilities too, we can teach Bonta how to do that
-        - Our ongoing responsibilities
+        - Ngraph's ongoing responsibilities
             - help build capabilities as-needed
-            - build and monitor guardrails
+            - build and monitor guardrails so the agents and their data are secure
             - update agents and tools as newer technology is released and we can improve Bonta's use of it
-
-- ChatGPT, Claude, etc. are all agents
-- An agent is an AI with tools
-- Tools for AI agents are things like accessing and reading documents, connecting to external services to get data and interact with it, and memory so an agent can remember certain important things you told it.
-- Agents can also take on a persona, like becoming an expert in responding to customer reviews about your restaurant
-- They can also learn/re-learn skills that you teach them, for example how to do your expenses.
-- ChatGPT and Claude are personal agents. The tools, persona, and skills are very specific to you. 
-- Agents can also be team agents, so they are accessible by everyone in the company, for example via Line or Slack.
-- Team agents also use tools, have a persona and can learn/re-learn skills, but they 
 
 
 
@@ -413,5 +411,21 @@ Practical recommendation: don't expose terminal/code-execution tools to employee
     What Hermes does not currently have built-in is per-user role-based permissions within a shared allowlist (e.g., "employee can chat, only admin can approve risky commands") — that's the same open GitHub RBAC issue mentioned above (Owner/Admin/User/Guest tiers), still a feature request, not shipped. Today, approval prompts route back to whoever's chat triggered them, not to a separate admin channel — you could build that routing yourself via Hermes' gateway lifecycle hooks (which can intercept pre/post tool-call and approval-request events), but it's custom work, not out of the box.
     Practical recommendation: don't expose terminal/code-execution tools to employee-facing profiles at all. If a business genuinely needs an agent that runs commands, do that in a separate, restricted profile that only your team (not the business's employees) can reach.
     """
+
+
+- ChatGPT, Claude, etc. are all agents
+- An agent is an AI with tools
+- Tools for AI agents are things like accessing and reading documents, connecting to external services to get data and interact with it, and memory so an agent can remember certain important things you told it.
+- Agents can also take on a persona, like becoming an expert in responding to customer reviews about your restaurant
+- They can also learn/re-learn skills that you teach them, for example how to do your expenses.
+- ChatGPT and Claude are personal agents. The tools, persona, and skills are very specific to you. 
+- Agents can also be team agents, so they are accessible by everyone in the company, for example via Line or Slack.
+- Team agents also use tools, have a persona and can learn/re-learn skills, but they 
+
+
+
+- IP is owned 
+
+- agents can do asynchronous tasks
 
 
