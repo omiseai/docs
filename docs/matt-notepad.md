@@ -3,8 +3,18 @@ title: "Matt-notepad"
 ---
 
 
+get our Hermes instance to work with Line
+
+
+
+
+
 
 MATT TODOS:
+- implement the 'User account linking' plan `line-dm-pairing-plan.md`
+- go through codebase
+- understand how the whole docker thing works, what customizations we made like Caddy that make it work with Line, document it
+- explain to Shingo new concept of one company agent but with multiple skills
 - think about context window management for users. How can we make sure our costs aren't too high. Is there some auto way to set this up with Hermes Agent?
 - redo Shingo and Matt's Telegram setup so we use the same bot token and both have a direct chat and group chat
     - make sure Hermes is set up for shared-context via `group_sessions_per_user: false`
@@ -28,72 +38,8 @@ MATT TODOS:
 
 
 
-- What is an AI Agent?
-    - An agent is simply AI you can chat with that with tools
-    - Tools for AI agents are things like accessing and reading documents, connecting to external services to get data and interact with it, and memory so an agent can remember certain important things you told it.
-    - Agents can also take on a persona, like becoming an expert in responding to customer reviews about your restaurant
-    - They can also learn/re-learn skills that you teach them, for example how to do your expenses.
-    - Agents can do scheduled tasks, for example generating a report for you every day before you start your work day.
-    - Agents can also be team agents, so they are accessible by everyone in the company, for example via Line or Slack.
-    - The tools, persona, skills and scheduled tasks that are specific to your company become your intellectual property.
-    - Companies that use AI agents can relieve themselves of repetative and mundane work so everyone can operate more efficiently.
-- Today vs. a few years ago
-    - few years ago
-        - we'd build Bonta an app
-        - the app would only do what Shingo and I built, based on Bonta's needs
-        - Bonta could only ever ask us to make features and would have to wait until we build them
-    - now
-        - we build agents
-        - at first, the agents do mostly do what we set them up to do, based on Bonta's needs
-        - Bonta can build new capabilities too, we can teach Bonta how to do that
-        - Ngraph's ongoing responsibilities
-            - help build capabilities as-needed
-            - build and monitor guardrails so the agents and their data are secure
-            - update agents and tools as newer technology is released and we can improve Bonta's use of it
 
 
-
-
-
-- just using basic features is fine, 
-- About Agent エイジェントとは？
-    - 
-
-
-- personal AI
-    - AI is an assistant for one person, has memory for just one human-agent interaction
-- a company agent
-    - AI is an employee who potentially helps all human employees, has memory of all employee interactions with it
-    - has its own memory, skills, tools, credentials that multiple employees benefit from
-
-- Bonta can create IP that is unique to them and valuable, and they can own it
-- Anthropic, OpenAI can go away as companies and Bonta can continue
-
-
-
-- Our Hermes setup
-    - one cloud Hermes instance per business
-    - multiple profiles reflect multiple virtual employees, each with their own tools, skills and so on
-    - each human user adds multiple Line chats, one per virtual employee chat
-    - a shared group for each agent exists, multiple employees can join
-
-
-
-
-
-
-
-A follow-up question. For terminal.backend, what is the point of the sibling container? And are the files and file system different there from the container where Hermes is running?
-
-And I think I'm starting to coalesce our setup here. Here is what I'm thinking:
-
-- one Render server with Docker of Hermes installation per business
-- multiple profiles for a business represent virtual employees all human employees have access to
-- integrate Honcho so an appropriate memory regime can support our use case
-- set appropriate guard rails so agents can't run certain destructive actions via CLI
-- establish some auto-bakup of data, and auto-commit of Hermes settings
-
-Now, we've discussed quite a bit. I'd like you to very carefully review our entire conversation up until now so nothing falls through the cracks. If a decision/preference of mine is unclear, ask me for clarification. I think we need to disable termainal commands for all employees for instance. Yet, I'd like to still be able to run them myself, which perhaps I could do via SSH into an instance. Once you're totally clear, build a comprehensive yet concise outline of our setup that includes all aspects that I laid out above, but enriched with the numerious things we'll need to set up, like I guess if we want to make true group chats where users share context, so we set `group_sessions_per_user: false`, right? But how would that reflect DMs? Or can `group_sessions_per_user: false` be set only for specific channels, leaving DM channels (if they do have a channel) default private? Maybe there are still some things we need to clear up first, you tell me. But ultimately I want a comprehensive outline I can go through and check items off as I create our first instance.
 
 
 
@@ -427,5 +373,69 @@ Practical recommendation: don't expose terminal/code-execution tools to employee
 - IP is owned 
 
 - agents can do asynchronous tasks
+
+
+- What is an AI Agent?
+    - An agent is simply AI you can chat with that with tools
+    - Tools for AI agents are things like accessing and reading documents, connecting to external services to get data and interact with it, and memory so an agent can remember certain important things you told it.
+    - Agents can also take on a persona, like becoming an expert in responding to customer reviews about your restaurant
+    - They can also learn/re-learn skills that you teach them, for example how to do your expenses.
+    - Agents can do scheduled tasks, for example generating a report for you every day before you start your work day.
+    - Agents can also be team agents, so they are accessible by everyone in the company, for example via Line or Slack.
+    - The tools, persona, skills and scheduled tasks that are specific to your company become your intellectual property.
+    - Companies that use AI agents can relieve themselves of repetative and mundane work so everyone can operate more efficiently.
+- Today vs. a few years ago
+    - few years ago
+        - we'd build Bonta an app
+        - the app would only do what Shingo and I built, based on Bonta's needs
+        - Bonta could only ever ask us to make features and would have to wait until we build them
+    - now
+        - we build agents
+        - at first, the agents do mostly do what we set them up to do, based on Bonta's needs
+        - Bonta can build new capabilities too, we can teach Bonta how to do that
+        - Ngraph's ongoing responsibilities
+            - help build capabilities as-needed
+            - build and monitor guardrails so the agents and their data are secure
+            - update agents and tools as newer technology is released and we can improve Bonta's use of it
+
+
+
+
+
+- just using basic features is fine, 
+- About Agent エイジェントとは？
+    - 
+
+
+- personal AI
+    - AI is an assistant for one person, has memory for just one human-agent interaction
+- a company agent
+    - AI is an employee who potentially helps all human employees, has memory of all employee interactions with it
+    - has its own memory, skills, tools, credentials that multiple employees benefit from
+
+- Bonta can create IP that is unique to them and valuable, and they can own it
+- Anthropic, OpenAI can go away as companies and Bonta can continue
+
+
+
+- Our Hermes setup
+    - one cloud Hermes instance per business
+    - multiple profiles reflect multiple virtual employees, each with their own tools, skills and so on
+    - each human user adds multiple Line chats, one per virtual employee chat
+    - a shared group for each agent exists, multiple employees can join
+
+
+
+A follow-up question. For terminal.backend, what is the point of the sibling container? And are the files and file system different there from the container where Hermes is running?
+
+And I think I'm starting to coalesce our setup here. Here is what I'm thinking:
+
+- one Render server with Docker of Hermes installation per business
+- multiple profiles for a business represent virtual employees all human employees have access to
+- integrate Honcho so an appropriate memory regime can support our use case
+- set appropriate guard rails so agents can't run certain destructive actions via CLI
+- establish some auto-bakup of data, and auto-commit of Hermes settings
+
+Now, we've discussed quite a bit. I'd like you to very carefully review our entire conversation up until now so nothing falls through the cracks. If a decision/preference of mine is unclear, ask me for clarification. I think we need to disable termainal commands for all employees for instance. Yet, I'd like to still be able to run them myself, which perhaps I could do via SSH into an instance. Once you're totally clear, build a comprehensive yet concise outline of our setup that includes all aspects that I laid out above, but enriched with the numerious things we'll need to set up, like I guess if we want to make true group chats where users share context, so we set `group_sessions_per_user: false`, right? But how would that reflect DMs? Or can `group_sessions_per_user: false` be set only for specific channels, leaving DM channels (if they do have a channel) default private? Maybe there are still some things we need to clear up first, you tell me. But ultimately I want a comprehensive outline I can go through and check items off as I create our first instance.
 
 
