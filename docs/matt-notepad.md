@@ -9,10 +9,30 @@ get our Hermes instance to work with Line
 
 
 
-
 MATT TODOS:
+- figure out all nuances of Line, ex. it looks like we all get our own channel with the agent. How can we make also a group channel? How does the User Account linking process actually work?
+- watch a deploy logs for errors and then see about fixing them
+- Is it possible for me to run each instance locally on my local docker?
+- what is the relationship between our repo and customer agent deployments? Like do we have to give each customer their own repo or something? 
+- note, our dashboard currently sets env vars for password
+- idea for dashboard -- Keep the dashboard reachable only through a private network path, such as Tailscale.
+    - Deprecate this info once a solution to protect endpoint is there:
+    """
+    ### Protect the URL before configuring
+
+    As of the June 2026 upstream hardening, the dashboard **does** have built-in authentication, and it fails closed: on a non-loopback bind (`HERMES_DASHBOARD_HOST=0.0.0.0`, which this Blueprint sets) the auth gate engages and the dashboard *refuses to bind* unless an auth provider is registered. `HERMES_DASHBOARD_INSECURE` no longer disables it — the flag is accepted and ignored.
+
+    That means a fresh deploy needs `HERMES_DASHBOARD_BASIC_AUTH_USERNAME` + `HERMES_DASHBOARD_BASIC_AUTH_PASSWORD` (plus `HERMES_DASHBOARD_BASIC_AUTH_SECRET` to sign sessions) set from the **Environment** tab, or the dashboard won't come up and the health check will fail. They're `sync: false` in the Blueprint, so Render never overwrites them.
+
+    Built-in auth is a real gate, not a substitute for thinking about exposure — the dashboard is still an admin surface holding your provider keys and a PTY into the container. Consider going further:
+
+    - Put the service behind an auth gateway that verifies a bearer token, OAuth session, or trusted identity provider.
+    - Keep the dashboard reachable only through a private network path, such as Tailscale.
+    - Accept the risk for a demo, use low-privilege keys, and delete the service when you're done.
+
+    Read the **Security** section before you paste production API keys.
+    """
 - implement the 'User account linking' plan `line-dm-pairing-plan.md`
-- go through codebase
 - understand how the whole docker thing works, what customizations we made like Caddy that make it work with Line, document it
 - explain to Shingo new concept of one company agent but with multiple skills
 - think about context window management for users. How can we make sure our costs aren't too high. Is there some auto way to set this up with Hermes Agent?
@@ -22,7 +42,6 @@ MATT TODOS:
 - talk to Shingo about OpenAI plans, prob we need a team plan or we use API pricing, or OpenRouter
 - now hermes agent endpoint is open, need to secure
 - also note the repo becomes public automatically, needs to be made private
-- need to make our own API, FastAPI, for things like Line webhook
 - will also need to docker-ize my own image of a Hermes setup (ex. starts with latest Hermes version)
 - build out list of per instance context, ex:
     - the company's org chart
